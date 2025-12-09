@@ -273,6 +273,9 @@ section {
 }
 
 .about-containers {
+    display: flex;
+    flex-wrap: wrap;          /* allow cards to move to next line */
+    justify-content: center;  /* center cards on each row */
     gap: 2rem;
     margin-bottom: 2rem;
     margin-top: 2rem;
@@ -300,11 +303,11 @@ section {
 
 .details-container {
     padding: 1.5rem;
-    flex: 1;
+    flex: 1 1 320px;          /* base width ~320px, can grow/shrink */
+    max-width: 380px;         /* prevents cards from becoming too wide */
     background: white;
     border-radius: 2rem;
-    border: rgb(53, 53, 53) 0.1rem solid;
-    border-color: rgb(163, 163, 163);
+    border: rgb(163, 163, 163) 0.1rem solid;
     text-align: center;
 }
 

@@ -348,10 +348,10 @@ section {
 }
 
 .project-image-wrapper {
-    width: 350px;     /* Uniform image width */
-    height: 220px;    /* Uniform image height */
+    width: 525px;     /* Uniform image width */
+    height: 325px;    /* Uniform image height */
     overflow: hidden; /* Crop overflow */
-    border-radius: 12px; /* Optional — matches card rounding */
+    border-radius: 12px;
 }
 
 .project-img {

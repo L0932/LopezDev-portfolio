@@ -348,8 +348,8 @@ section {
 }
 
 .project-image-wrapper {
-    width: 525px;     /* Uniform image width */
-    height: 325px;    /* Uniform image height */
+    width: 420px;     /* Uniform image width */
+    height: 260px;    /* Uniform image height */
     overflow: hidden; /* Crop overflow */
     border-radius: 12px;
 }

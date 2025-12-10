@@ -299,6 +299,13 @@ section {
     position: relative;
 }
 
+/* Limit width of About section on large screens */
+#about .section-container {
+    max-width: 1200px;    /* You can adjust (1100–1300px looks best) */
+    margin: 0 auto;       /* Center it */
+    padding: 0 2rem;      /* Add side padding so it never hugs edges */
+}
+
 .about-containers {
     display: flex;
     flex-wrap: wrap;          /* allow cards to move to next line */

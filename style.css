@@ -351,10 +351,13 @@ section {
 }
 
 .project-image-wrapper {
-    width: 420px;     /* Uniform image width */
-    height: 260px;    /* Uniform image height */
+    /* width: 420px; */    /* Uniform image width */
+    /* height: 260px; */   /* Uniform image height */
+    width: 100%;
+    max-width: 100%;
+    aspect-ratio: 16/ 9;
     overflow: hidden; /* Crop overflow */
-    border-radius: 12px;
+    border-radius: 1.5rem; /* 12px;*/
 }
 
 .project-img {
@@ -384,12 +387,6 @@ article .icon {
 .color-container {
     border-color: rgb(163, 163, 163);
     background: rgb(250, 250, 250);
-}
-
-.project-img {
-    border-radius: 2rem;
-    width: 90%;
-    height: 90%
 }
 
 .project-title {

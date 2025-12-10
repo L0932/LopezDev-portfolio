@@ -67,6 +67,28 @@
     }
 }
 
+/* mobile text padding fix */
+@media (max-width: 768px) {
+    section,
+    .text-container,
+    .about-details-container {
+        padding: 0 1.5rem;
+    }
+
+    p {
+        font-size: 1rem;
+        line-height: 1.55;
+    }
+
+    body {
+        line-height: 1.6;
+    }
+
+    #about {
+        padding: 0 1.25rem;
+    }
+}
+
 @media screen and (max-width: 600px) {
     #contact, footer {
         height: 40vh;

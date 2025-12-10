@@ -10,6 +10,30 @@
 }
 
 @media screen and (max-width: 1200px) {
+    #about .section-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    #about .section__pic-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        width: min(80%, 320px);   /* responsive width, max 320px */
+        height: auto;
+        margin: 2.5rem auto 2rem; /* more space under "About Me" */
+    }
+
+    #about .about-pic {
+        width: 100%;
+        height: auto;
+        display: block;
+        border-radius: 2rem;      /* keep the rounded corners */
+    }
+
     #desktop-nav {
         display: none;
     }

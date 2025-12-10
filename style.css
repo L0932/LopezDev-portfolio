@@ -9,6 +9,7 @@
 
 body {
     font-family: "Poppins", sans-serif;
+    padding-top: 17vh;   /* matches nav height so content starts below */
 }
 
 html {
@@ -67,7 +68,28 @@ a:hover {
 
 /* HAMBURGER MENU */
 
+#desktop-nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    background-color: #ffffff;
+
+    display: flex;                  /* always show on desktop by default */
+    justify-content: space-around;
+    align-items: center;
+    height: 17vh;                   /* or a fixed px height if you prefer */
+}
+
 #hamburger-nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    background-color: #ffffff;
+
     display: none;
 }
 
@@ -143,12 +165,17 @@ a:hover {
 
 /* SECTIONS */
 
+#welcome {
+    scroll-margin-top: 18vh;   /* same offset you applied to sections */
+}
+
 section {
     padding-top: 4vh;
     height: 96vh;
     margin: 0 10rem;
     box-sizing: border-box;
     min-height: fit-content;
+    scroll-margin-top: 18vh;   /* a bit more than nav height (17vh) */
 }
 
 .section-container {

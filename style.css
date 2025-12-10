@@ -448,6 +448,21 @@ article .icon {
     border-color: rgb(163, 163, 163);
 }
 
+.project-description {
+    margin-bottom: 28px;
+}
+
+.btn-container {
+    margin-top: 10px;
+}
+
+/* Only project cards */
+.details-container.color-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;  /* push buttons to bottom */
+}
+
 /* CONTACT SECTION */
 
 #contact {

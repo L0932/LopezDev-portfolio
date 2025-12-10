@@ -351,8 +351,6 @@ section {
 }
 
 .project-image-wrapper {
-    /* width: 420px; */    /* Uniform image width */
-    /* height: 260px; */   /* Uniform image height */
     width: 100%;
     max-width: 100%;
     aspect-ratio: 16/ 9;
@@ -382,6 +380,10 @@ article .icon {
 
 #projects {
     position: relative;
+}
+
+#projects .article-container {
+    justify-content: center;
 }
 
 .color-container {

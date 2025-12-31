@@ -1,2 +1,5 @@
-/projects/dungeon-demo        https://soft-croissant-cf3fd3.netlify.app     200
-/projects/terrasweeper        https://peaceful-brioche-374e9e.netlify.app   200
+/projects/dungeon-generator-demo          https://soft-croissant-cf3fd3.netlify.app                   200
+/projects/dungeon-generator-demo/*        https://soft-croissant-cf3fd3.netlify.app/:splat            200
+
+/projects/terrasweeper                    https://peaceful-brioche-374e9e.netlify.app                 200
+/projects/terrasweeper/*                  https://peaceful-brioche-374e9e.netlify.app/:splat          200

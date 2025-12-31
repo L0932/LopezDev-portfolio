@@ -76,6 +76,9 @@
     }
 
     p {
+        text-align: left;
+        letter-spacing: normal;
+        word-spacing: normal;
         font-size: 1rem;
         line-height: 1.55;
     }

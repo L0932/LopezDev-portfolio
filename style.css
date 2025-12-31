@@ -153,15 +153,9 @@ a:hover {
     transform: rotate(-45deg) translate(10px, -5px);
 }
 
-.hamburger-icon span:first-child {
-    transform: none;
-}
-.hamburger-icon span:first-child {
-    opacity: 1;
-}
-.hamburger-icon span:first-child {
-    transform: none;
-}
+.hamburger-icon span:first-child { transform: none; }
+.hamburger-icon span:nth-child(2) { opacity: 1; }
+.hamburger-icon span:last-child { transform: none; }
 
 /* SECTIONS */
 
@@ -170,12 +164,12 @@ a:hover {
 }
 
 section {
-    padding-top: 4vh;
-    height: 96vh;
-    margin: 0 10rem;
-    box-sizing: border-box;
-    min-height: fit-content;
-    scroll-margin-top: 18vh;   /* a bit more than nav height (17vh) */
+  padding-top: 4vh;
+  min-height: 96vh;
+  height: auto;         
+  margin: 0 10rem;
+  box-sizing: border-box;
+  scroll-margin-top: 18vh;
 }
 
 .section-container {
@@ -358,8 +352,62 @@ section {
 
 /* EXPERIENCE SECTION */
 
+#experience .experience-sub-title {
+  /* Responsive sizing so it doesn't dominate at mid widths */
+  font-size: clamp(1.25rem, 2vw, 1.6rem);
+  line-height: 1.2;
+  margin-bottom: 1.25rem;
+
+  /* Helps titles wrap more naturally */
+  text-wrap: balance; /* supported in modern browsers */
+}
+
+#experience .details-container .experience-sub-title {
+  min-height: 3.1em; /* enough room for 2 lines */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
 #experience {
     position: relative;
+}
+
+#experience .about-containers {
+  align-items: stretch;
+}
+
+#experience .article-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* two columns */
+  gap: 1.25rem 2rem;             /* row gap, column gap */
+  justify-content: initial;       /* stop space-around weirdness */
+  text-align: left;
+}
+
+#experience article {
+  width: auto;                   /* remove 10rem constraint */
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 0.75rem;
+}
+
+#experience article h3 {
+  font-size: 1rem;
+  line-height: 1.2;
+  margin: 0;
+}
+
+#experience article p {
+  margin-top: 0.25rem;
+  font-size: 0.9rem;
+  color: rgb(120, 120, 120);
+}
+
+#experience article .icon {
+  height: 1.25rem;
+  margin-top: 0.1rem;
 }
 
 .experience-sub-title {

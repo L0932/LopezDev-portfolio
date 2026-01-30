@@ -1,323 +1,386 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>LopezDev Portfolio</title>
-    <link rel="stylesheet" href="style.css" />
-    <link rel="stylesheet" href="mediaqueries.css" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>LopezDev Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="mediaqueries.css" />
 </head>
 <body>
-    <nav id="desktop-nav">
-       <div class="logo">Arnold Lopez</div>
-       <div>
+  <nav id="desktop-nav">
+    <div class="logo">Arnold Lopez</div>
+    <div>
+      <ul class="nav-links">
+        <li><a href="#profile">Resume</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <nav id="hamburger-nav">
+    <div class="logo">Arnold Lopez</div>
+    <div class="hamburger-menu">
+      <div class="hamburger-icon" onclick="toggleMenu()">
+        <span></span><span></span><span></span>
+      </div>
+      <div class="menu-links">
+        <li><a href="#profile" onclick="toggleMenu()">Resume</a></li>
+        <li><a href="#about" onclick="toggleMenu()">About</a></li>
+        <li><a href="#experience" onclick="toggleMenu()">Experience</a></li>
+        <li><a href="#projects" onclick="toggleMenu()">Projects</a></li>
+        <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
+      </div>
+    </div>
+  </nav>
+
+  <section id="profile">
+    <div class="section__pic-container">
+      <img src="./assets/profile-pic-01.jpg" alt="Arnold Lopez profile picture" class="circle-profile-photo" />
+    </div>
+
+    <div class="section__text">
+      <p class="section__text__p1">Hello, I'm</p>
+      <h1 class="title">Arnold Lopez</h1>
+      <p class="section__text__p2">Game Developer</p>
+
+      <div class="btn-container">
+        <button class="btn btn-color-2" onclick="window.open('./assets/Arnold-Lopez-Resume.pdf')">
+          Resume
+        </button>
+        <button class="btn btn-color-1" onclick="location.href='./#contact'">
+          Contact Info
+        </button>
+      </div>
+
+      <div id="socials-container">
+        <img
+          src="./assets/linkedin.png"
+          alt="My LinkedIn profile"
+          class="icon"
+          onclick="window.open('https://linkedin.com/in/arnoldlopez/')"
+        />
+        <img
+          src="./assets/github.png"
+          alt="My Github profile"
+          class="icon"
+          onclick="window.open('https://github.com/L0932')"
+        />
+      </div>
+    </div>
+  </section>
+
+  <section id="about">
+    <p class="section__text__p1">Get To Know More</p>
+    <h1 class="title">About Me</h1>
+
+    <div class="section-container">
+      <div class="section__pic-container">
+        <img src="./assets/profile-pic-02.jpg" alt="Profile picture" class="about-pic" />
+      </div>
+
+      <div class="about-details-container">
+        <div class="about-containers">
+          <div class="details-container">
+            <img src="./assets/experience.png" alt="Experience icon" class="icon" />
+            <h3>Experience</h3>
+            <p class="exp-details">
+              <span>6+ Years Software Development</span><br />
+              <span>Gameplay • Tools • Real-Time Systems</span><br />
+            </p>
+          </div>
+
+          <div class="details-container">
+            <img src="./assets/education.png" alt="Education icon" class="icon" />
+            <h3>Education</h3>
+            <p>B.Sc in Computer Game Development<br />DePaul University</p>
+          </div>
+        </div>
+
+        <div class="text-container">
+          <p>
+            I’m a software engineer working primarily in C# and C++, focused on building real-time gameplay and simulation systems.
+            My work spans gameplay systems, interactive simulations, engine-level features, and internal tools, with an emphasis on
+            performance, quality, and long-term maintainability. I’ve contributed to commercial games, VR training applications, and
+            simulation software, working across both high-level gameplay code and lower-level systems. I approach development pragmatically:
+            write clear code, measure performance early, and design systems that scale as projects grow. I care less about novelty and more
+            about shipping reliable, understandable software under real constraints, and building systems that other engineers and designers
+            can extend with confidence.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <img src="./assets/arrow.png" alt="Arrow Icon" class="icon arrow" onclick="location.href='./#experience'" />
+  </section>
+
+  <section id="experience">
+    <p class="section__text__p1">Explore My</p>
+    <h1 class="title">Experience</h1>
+
+    <div class="experience-details-container">
+      <div class="about-containers">
+        <div class="details-container">
+          <h2 class="experience-sub-title">Gameplay & Real-Time<br />Systems</h2>
+          <p class="experience-meta">Engines: Unity, Unreal</p>
+          <div class="experience-divider"></div>
+
+          <div class="article-container">
+            <article>
+              <img src="./assets/checkmark.png" alt="experience-icon" class="icon" />
+              <div><h3>Gameplay Systems</h3></div>
+            </article>
+
+            <article>
+              <img src="./assets/checkmark.png" alt="experience-icon" class="icon" />
+              <div><h3>Physics & Interaction Systems</h3></div>
+            </article>
+
+            <article>
+              <img src="./assets/checkmark.png" alt="experience-icon" class="icon" />
+              <div><h3>Networking & Multiplayer Systems</h3></div>
+            </article>
+
+            <article>
+              <img src="./assets/checkmark.png" alt="experience-icon" class="icon" />
+              <div><h3>VR Training Simulations</h3></div>
+            </article>
+          </div>
+        </div>
+
+        <div class="details-container">
+          <h2 class="experience-sub-title">Tools, Rendering &<br />XR</h2>
+          <p class="experience-meta">Focus: Graphics & Tooling</p>
+          <div class="experience-divider"></div>
+
+          <div class="article-container">
+            <article>
+              <img src="./assets/checkmark.png" alt="experience-icon" class="icon" />
+              <div><h3>Tools & Workflow Automation</h3></div>
+            </article>
+
+            <article>
+              <img src="./assets/checkmark.png" alt="experience-icon" class="icon" />
+              <div><h3>Real-Time Rendering Optimization</h3></div>
+            </article>
+
+            <article>
+              <img src="./assets/checkmark.png" alt="experience-icon" class="icon" />
+              <div><h3>Shader Development</h3></div>
+            </article>
+
+            <article>
+              <img src="./assets/checkmark.png" alt="experience-icon" class="icon" />
+              <div><h3>Graphics Debugging</h3></div>
+            </article>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <img src="./assets/arrow.png" alt="Arrow Icon" class="icon arrow" onclick="location.href='./#projects'" />
+  </section>
+
+  <section id="projects">
+    <p class="section__text__p1">Browse My Recent</p>
+    <h1 class="title">Projects</h1>
+
+    <div class="experience-details-container">
+      <div class="about-containers">
+        <div class="details-container color-container">
+          <div class="article-container">
+            <div class="project-image-wrapper">
+              <img src="./assets/dungeon-project.png" alt="Dungeon Generator" class="project-img" />
+            </div>
+          </div>
+
+          <h2 class="experienced-sub-title project-title">Dungeon Generator</h2>
+          <p class="project-description">
+            Runtime procedural dungeon generator using Binding of Isaac-style room placement, interactive camera controls,
+            and a custom immediate-mode UI for live parameter tuning and iteration.
+          </p>
+
+          <div class="btn-container">
+            <button class="btn btn-color-2 project-btn" onclick="window.open('https://github.com/L0932/DungeonGenerator', '_blank')">
+              Github
+            </button>
+            <button class="btn btn-color-2 project-btn" onclick="window.open('https://lopezdeveloper.net/projects/dungeon-generator-demo/', '_blank')">
+              Live Demo
+            </button>
+          </div>
+        </div>
+
+        <div class="details-container color-container">
+          <div class="article-container">
+            <div class="project-image-wrapper">
+              <img src="./assets/terrasweeper-pic.png" alt="Terrasweeper" class="project-img" />
+            </div>
+          </div>
+
+          <h2 class="experienced-sub-title project-title">Terrasweeper</h2>
+          <p class="project-description">
+            A 3D Minesweeper style game built around real-time terrain deformation. Incorrect tile picks trigger explosions that crater the ground.
+            Features timed runs, leaderboards, and Google Play achievements on Android.
+          </p>
+
+          <div class="btn-container">
+            <button class="btn btn-color-2 project-btn" onclick="window.open('https://github.com/L0932/Terrasweeper', '_blank')">
+              Github
+            </button>
+            <button class="btn btn-color-2 project-btn" onclick="window.open('https://lopezdeveloper.net/projects/terrasweeper/', '_blank')">
+              Live Demo
+            </button>
+          </div>
+        </div>
+
+        <div class="details-container color-container">
+          <div class="article-container">
+            <div class="project-image-wrapper">
+              <img src="./assets/project-souls-pic.png" alt="Project Souls" class="project-img" />
+            </div>
+          </div>
+
+          <h2 class="experienced-sub-title project-title">Project Souls (WIP)</h2>
+          <p class="project-description">
+            A work-in-progress Souls-like gameplay prototype focused on core combat foundations, including player control, basic AI, weapon switching,
+            animation-driven attacks, and damage systems.
+          </p>
+
+          <div class="btn-container">
+            <button class="btn btn-color-2 project-btn" onclick="window.open('https://github.com/L0932/Project-Souls', '_blank')">
+              Github
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <img src="./assets/arrow.png" alt="Arrow Icon" class="icon arrow" onclick="location.href='./#contact'" />
+  </section>
+
+  <section id="contact">
+    <p class="section__text__p1">Get in Touch</p>
+    <h1 class="title">Contact Me</h1>
+
+    <div class="contact-info-upper-container">
+      <div class="contact-info-container">
+        <img src="./assets/email.png" alt="Email icon" class="icon contact-icon email-icon" />
+        <p><a href="mailto:arnold.r.lopez@hotmail.com">arnold.r.lopez@hotmail.com</a></p>
+      </div>
+
+      <div class="contact-info-container">
+        <img src="./assets/linkedin.png" alt="LinkedIn icon" class="icon contact-icon" />
+        <p>
+          <a href="javascript:window.open('https://linkedin.com/in/arnoldlopez/', '_blank');">LinkedIn</a>
+        </p>
+      </div>
+    </div>
+
+    <!-- Contract and Freelance (inside Contact, not in nav) -->
+    <div class="freelance-block">
+      <p class="section__text__p1">Available For</p>
+      <h2 class="freelance-title">Contract & Freelance Work</h2>
+      <p class="freelance-subtitle">
+        Short, focused engineering work with clear deliverables. Email me with scope and timeline.
+      </p>
+
+      <div class="freelance-cards">
+        <div class="details-container color-container freelance-card">
+          <div class="freelance-card-head">
+            <div class="freelance-icon" aria-hidden="true">
+              <!-- controller -->
+              <svg viewBox="0 0 24 24" width="24" height="24">
+                <path d="M7 10h10a5 5 0 0 1 5 5v1a3 3 0 0 1-5 2l-1-1H8l-1 1a3 3 0 0 1-5-2v-1a5 5 0 0 1 5-5Z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M8.5 13.5h2.5M9.75 12.25v2.5" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+                <path d="M15.75 13.25h.01M17.25 14.25h.01" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/>
+              </svg>
+            </div>
+            <h3>Gameplay Systems</h3>
+          </div>
+
+          <p class="freelance-desc">
+            Mechanics, player controllers, combat loops, interaction systems, and clean architecture in Unity or Unreal.
+          </p>
+
+          <ul class="freelance-list">
+            <li>Prototype to production polish</li>
+            <li>Refactors and stability work</li>
+            <li>Systems built for iteration</li>
+          </ul>
+        </div>
+
+        <div class="details-container color-container freelance-card">
+          <div class="freelance-card-head">
+            <div class="freelance-icon" aria-hidden="true">
+              <!-- wrench -->
+              <svg viewBox="0 0 24 24" width="24" height="24">
+                <path d="M14 7a4 4 0 0 0 5 5l-9.5 9.5a2 2 0 0 1-2.8 0l-.4-.4a2 2 0 0 1 0-2.8L15.8 9A4 4 0 0 0 14 7Z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+                <path d="M7.5 20.5 3 16" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+              </svg>
+            </div>
+            <h3>Tools & Workflow</h3>
+          </div>
+
+          <p class="freelance-desc">
+            Internal tools that speed up content creation and reduce friction for designers and engineers.
+          </p>
+
+          <ul class="freelance-list">
+            <li>Editor tools and utilities</li>
+            <li>Automation scripts and pipelines</li>
+            <li>Debug visualizations</li>
+          </ul>
+        </div>
+
+        <div class="details-container color-container freelance-card">
+          <div class="freelance-card-head">
+            <div class="freelance-icon" aria-hidden="true">
+              <!-- bolt -->
+              <svg viewBox="0 0 24 24" width="24" height="24">
+                <path d="M13 2 3 14h7l-1 8 12-14h-7l-1-6Z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </div>
+            <h3>Performance Pass</h3>
+          </div>
+
+          <p class="freelance-desc">
+            Profiling and targeted optimizations for CPU, GPU, memory, and frame pacing.
+          </p>
+
+          <ul class="freelance-list">
+            <li>Bottleneck diagnosis</li>
+            <li>High impact fixes</li>
+            <li>Clear before/after notes</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="freelance-cta">
+        <a class="btn btn-color-2 freelance-btn" href="mailto:arnold.r.lopez@hotmail.com?subject=Contract%20Inquiry">
+          Email for availability
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <nav>
+      <div class="nav-links-container">
         <ul class="nav-links">
-            <li><a href="#profile">Resume</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#experience">Experience</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#contact">Contact</a></li>
+          <li><a href="#profile">Resume</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#experience">Experience</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#contact">Contact</a></li>
         </ul>
-       </div>
+      </div>
     </nav>
-    <nav id="hamburger-nav">
-        <div class="logo">Arnold Lopez</div>
-        <div class="hamburger-menu">
-            <div class="hamburger-icon" onclick="toggleMenu()">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
-            <div class="menu-links">
-                <li><a href="#profile" onclick="toggleMenu()">Resume</a></li>
-                <li><a href="#about" onclick="toggleMenu()">About</a></li>
-                <li><a href="#experience" onclick="toggleMenu()">Experience</a></li>
-                <li><a href="#projects" onclick="toggleMenu()">Projects</a></li>
-                <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
-            </div>
-        </div>
-    </nav>
-    <section id="profile">
-        <div class="section__pic-container">
-            <img src="./assets/profile-pic-01.jpg" alt="Arnold Lopez profile picture" class='circle-profile-photo'>
-        </div>
-        <div class="section__text">
-            <p class="section__text__p1">Hello, I'm</p>
-            <h1 class="title">Arnold Lopez</h1>
-            <p class="section__text__p2">Game Developer</p>
-            <div class="btn-container">
-                <button
-                    class="btn btn-color-2"
-                    onclick="window.open('./assets/Arnold-Lopez-Resume.pdf')"
-                >
-                    Resume
-                </button>
-                <button class="btn btn-color-1" onclick="location.href='./#contact'">
-                    Contact Info
-                </button>
-            </div>
-            <div id="socials-container">
-                <img
-                    src="./assets/linkedin.png"
-                    alt="My LinkedIn profile"
-                    class="icon"
-                    onclick="window.open('https://linkedin.com/in/arnoldlopez/')"
-                 />
-                <img
-                    src="./assets/github.png"
-                    alt="My Github profile"
-                    class="icon"
-                    onclick="window.open('https://github.com/L0932')"
-                 />
-            </div>
-        </div>
-    </section>
-    <section id="about">
-        <p class="section__text__p1">Get To Know More</p>
-        <h1 class="title">About Me</h1>
-        <div class="section-container">
-            <div class="section__pic-container">
-                <img
-                     src="./assets/profile-pic-02.jpg"
-                     alt="Profile picture"
-                     class="about-pic"
-                />
-            </div>
-            <div class="about-details-container">
-                <div class="about-containers">
-                    <div class="details-container">
-                        <img
-                            src="./assets/experience.png"
-                            alt="Experience icon"
-                            class="icon"
-                        />
-                        <h3>Experience</h3>
-                        <p class="exp-details">
-                            <span>6+ Years Software Development</span><br />
-                            <span> Gameplay • Tools • Real-Time Systems </span> <br />
-                            <!-- <span>Unity • C# • C++ • VR/XR</span> -->
-                        </p>
-                    </div>
-                    <div class="details-container">
-                        <img
-                            src="./assets/education.png"
-                            alt="Education icon"
-                            class="icon"
-                        />
-                        <h3 class=>Education</h3>
-                        <p>B.Sc in Computer Game Development<br />DePaul University</p>
-                    </div>
-                </div>
-                <div class="text-container">
-                    <p> I’m a software engineer working primarily in C# and C++, focused on building real-time gameplay and simulation systems. My work spans gameplay systems, interactive simulations,
-                        engine-level features, and internal tools, with an emphasis on performance, quality, and long-term maintainability. I’ve contributed to commercial games, VR training applications, 
-                        and simulation software, working across both high-level gameplay code and lower-level systems.
-                        I approach development pragmatically: write clear code, measure performance early, and design systems that scale as projects grow. 
-                        I care less about novelty and more about shipping reliable, understandable software under real constraints, and building systems that other engineers and designers can extend with confidence.
-                    </p>
-                </div>
-            </div>
-        </div>
-        <img
-            src="./assets/arrow.png"
-            alt="Arrow Icon"
-            class="icon arrow"
-            onclick="location.href='./#experience'"
-        />
-    </section>
-    <section id="experience">
-        <p class="section__text__p1"> Explore My</p>
-        <h1 class="title">Experience</h1>
-        <div class="experience-details-container">
-            <div class="about-containers">
-                <div class="details-container">
-                    <h2 class="experience-sub-title">Gameplay & Real-Time<br>Systems</h2>
-                    <p class="experience-meta">Engines: Unity, Unreal</p>
-                    <div class="experience-divider"></div>
-                    <div class="article-container">
-                        <article>
-                            <img src="./assets/checkmark.png" alt="experience-icon" class="icon" />
-                                <div> <h3>Gameplay Systems</h3></div>
-                        </article>
-                        <article>
-                                <img src="./assets/checkmark.png" alt="experience-icon" class="icon"/>
-                                <div><h3>Physics & Interaction Systems</h3></div>
-                        </article>
-                        <article>
-                            <img src="./assets/checkmark.png" alt="experience-icon" class="icon"/>
-                                <div> <h3>Networking & Multiplayer Systems</h3></div>
-                        </article>
-                        <article>
-                                <img src="./assets/checkmark.png" alt="experience-icon" class="icon" />
-                                <div><h3>VR Training Simulations</h3></div>
-                        </article>
-                    </div>
-                </div>
-                <div class="details-container">
-                    <h2 class="experience-sub-title">Tools, Rendering & <br>XR</h2>
-                    <p class="experience-meta">Focus: Graphics & Tooling</p>
-                    <div class="experience-divider"></div>
-                    <div class="article-container">
-                        <article>
-                            <img src="./assets/checkmark.png" alt="experience-icon" class="icon"/>
-                                <div><h3>Tools & Workflow Automation</h3></div>
-                        </article>
-                        <article>
-                            <img src="./assets/checkmark.png" alt="experience-icon" class="icon"/>
-                                <div> <h3>Real-Time Rendering Optimization</h3></div>
-                        </article>
-                        <article>
-                            <img src="./assets/checkmark.png" alt="experience-icon" class="icon"/>
-                                <div> <h3>Shader Development</h3></div>
-                        </article>
-                        <article>
-                            <img src="./assets/checkmark.png" alt="experience-icon" class="icon"/>
-                                <div><h3>Graphics Debugging</h3></div>
-                        </article>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <img
-            src="./assets/arrow.png"
-            alt="Arrow Icon"
-            class="icon arrow"
-            onclick="location.href='./#projects'"
-        />
-    </section>
-    <section id="projects">
-        <p class="section__text__p1">Browse My Recent</p>
-        <h1 class="title">Projects</h1>
-        <div class="experience-details-container">
-            <div class="about-containers">
-            <div class="details-container color-container">
-                <div class="article-container">
-                     <div class="project-image-wrapper">
-                    <img
-                        src="./assets/dungeon-project.png"
-                        alt="Project 1"
-                        class="project-img"
-                        />
-                    </div>
-                </div>
-                <h2 class="experienced-sub-title project-title">Dungeon Generator</h2>
-                <p class="project-description">
-                    Runtime procedural dungeon generator built around Binding of Isaac-style room layouts. Includes interactive camera controls, 
-                    and a custom immediate-mode UI for live parameter tuning and iteration.
-                </p>
-                <div class="btn-container">
-                    <button class="btn btn-color-2 project-btn" onclick=
-                        "window.open('https://github.com/L0932/DungeonGenerator', '_blank')">
-                        Github
-                    </button>
-                    <button class="btn btn-color-2 project-btn" onclick=
-                        "window.open('https://lopezdeveloper.net/projects/dungeon-generator-demo/', '_blank')">
-                        Live Demo
-                    </button>
-                </div>
-            </div>
-            <div class="details-container color-container">
-                <div class="article-container">
-                    <div class="project-image-wrapper">
-                    <img
-                        src="./assets/terrasweeper-pic.png"
-                        alt="Project 2"
-                        class="project-img"
-                        />
-                    </div>
-                </div>
-                <h2 class="experienced-sub-title project-title">Terrasweeper</h2>
-                <p class="project-description">
-                    A 3D Minesweeper-style game featuring real-time terrain deformation. 
-                    Incorrect tile picks trigger physics-driven explosions that permanently reshape the environment. 
-                    Includes timed runs, leaderboards, and Google Play achievements.
-                </p>
-                <div class="btn-container">
-                    <button class="btn btn-color-2 project-btn" onclick=
-                    "window.open('https://github.com/L0932/Terrasweeper')">
-                    Github
-                    </button>
-                    <button class="btn btn-color-2 project-btn" onclick=
-                    "window.open('https://lopezdeveloper.net/projects/terrasweeper/')">
-                    Live Demo
-                    </button>
-                </div>
-            </div>
-            <!---
-            <div class="details-container color-container">
-                <div class="article-container">
-                    <div class="project-image-wrapper">
-                    <img
-                        src="./assets/project-souls-pic.png"
-                        alt="Project 3"
-                        class="project-img"
-                        />
-                    </div>
-                </div>
-                <h2 class="experienced-sub-title project-title">Project Souls (WIP)</h2>
-                <p class="project-description">
-                    A work-in-progress Souls-like gameplay prototype focused on core combat foundations, including player control, basic AI, weapon switching, 
-                    animation-driven attacks, and damage systems.
-                </p>
-                <div class="btn-container">
-                    <button class="btn btn-color-2 project-btn" onclick=
-                    "window.open('https://github.com/L0932/Project-Souls')">
-                    Github
-                    </button>
-                    <!-- <button class="btn btn-color-2 project-btn" onclick=
-                    "window.open('https://github.com/')">
-                    Live Demo
-                    </button> 
-                </div>
-            </div>-->
-        </div>
-        </div>
-        <img
-            src="./assets/arrow.png"
-            alt="Arrow Icon"
-            class="icon arrow"
-            onclick="location.href='./#experience'"
-        />
-    </section>
-    <section id="contact">
-        <p class="section__text__p1"> Get in Touch</p>
-        <h1 class="title">Contact Me</h1>
-        <div class="contact-info-upper-container">
-            <div class="contact-info-container">
-                <img
-                    src="./assets/email.png"
-                    alt="Email icon"
-                    class="icon contact-icon email-icon"
-                />
-                <p><a href="mailto:arnold.r.lopez@hotmail.com">arnold.r.lopez@hotmail.com</a></p>
-            </div>
-            <div class="contact-info-container">
-                <img
-                    src="./assets/linkedin.png"
-                    alt="LinkedIn icon"
-                    class="icon contact-icon"
-                />
-                <p><a href="javascript:window.open('https://linkedin.com/in/arnoldlopez/', '_blank');">
-                    LinkedIn
-                    </a>
-                </p>
-            </div>
-        </div>
-    </section>
-    <footer>
-        <nav>
-            <div class="nav-links-container">
-                <ul class="nav-links">
-                    <li><a href="#profile">Resume</a></li>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#experience">Experience</a></li>
-                    <li><a href="#projects">Projects</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
-            </div>
-        </nav>
-        <p>Copyright &#169; 2025 Arnold Lopez. All Rights Reserved.</p>
-    </footer>
-    <script src="script.js"></script>
+    <p>Copyright &#169; 2025 Arnold Lopez. All Rights Reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>

@@ -352,6 +352,25 @@ section {
 
 /* EXPERIENCE SECTION */
 
+.experience-divider {
+  width: 85%;
+  height: 1px;
+  background-color: rgb(210, 210, 210);
+  margin: 0.75rem 0 1.1rem;
+}
+
+.experience-meta {
+  margin: 0.25rem 0 0.65rem;
+  font-size: 0.95rem;
+  color: rgb(120, 120, 120);
+}
+
+.experience-sub-title {
+  line-height: 1.15;
+  min-height: 3.2rem; /* keeps both titles visually aligned */
+  text-wrap: balance; /* helps nicer wrapping in modern browsers */
+}
+
 #experience .experience-sub-title {
   /* Responsive sizing so it doesn't dominate at mid widths */
   font-size: clamp(1.25rem, 2vw, 1.6rem);

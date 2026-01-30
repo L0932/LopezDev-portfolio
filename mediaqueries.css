@@ -67,6 +67,12 @@
     }
 }
 
+@media screen and (max-width: 900px) {
+  #experience .article-container {
+    grid-template-columns: 1fr;
+  }
+}
+
 /* mobile text padding fix */
 @media (max-width: 768px) {
     section,

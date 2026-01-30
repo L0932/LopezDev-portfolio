@@ -360,33 +360,23 @@ section {
 }
 
 .experience-meta {
-  margin: 0.25rem 0 0.65rem;
+  margin-top: 0;          /* removes extra space above subheading */
+  margin-bottom: 0.45rem;  /* controls space before divider */
   font-size: 0.95rem;
   color: rgb(120, 120, 120);
 }
 
-.experience-sub-title {
-  line-height: 1.15;
-  min-height: 3.2rem; /* keeps both titles visually aligned */
-  text-wrap: balance; /* helps nicer wrapping in modern browsers */
-}
-
 #experience .experience-sub-title {
-  /* Responsive sizing so it doesn't dominate at mid widths */
+  color: rgb(85,85,85);
+  font-weight: 600;
   font-size: clamp(1.25rem, 2vw, 1.6rem);
-  line-height: 1.2;
-  margin-bottom: 1.25rem;
-
-  /* Helps titles wrap more naturally */
-  text-wrap: balance; /* supported in modern browsers */
+  line-height: 1.15;
+  margin-bottom: 0.25rem;
+  text-align: center;
 }
 
 #experience .details-container .experience-sub-title {
-  min-height: 3.1em; /* enough room for 2 lines */
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
+    display: block
 }
 
 #experience {
@@ -427,13 +417,6 @@ section {
 #experience article .icon {
   height: 1.25rem;
   margin-top: 0.1rem;
-}
-
-.experience-sub-title {
-    color: rgb(85,85,85);
-    font-weight: 600;
-    font-size: 1.75rem;
-    margin-bottom: 2rem;
 }
 
 .experience-details-container {

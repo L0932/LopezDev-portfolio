@@ -794,3 +794,81 @@ section {
 #main-content {
   scroll-margin-top: 6rem;
 }
+
+/* FORGESIM CASE STUDY */
+.case-back-link {
+  color: var(--color-muted);
+  font-size: 0.8rem;
+}
+
+.case-intro {
+  padding-block: clamp(3rem, 7vw, 6rem);
+}
+
+.case-intro h1 {
+  margin-bottom: 1rem;
+  font-size: clamp(3rem, 7vw, 5rem);
+  font-weight: 600;
+  letter-spacing: -0.05em;
+  line-height: 1.1;
+}
+
+.case-summary {
+  max-width: 42ch;
+  margin-bottom: 1.5rem;
+  color: var(--color-highlight);
+  font-size: clamp(1.2rem, 2.5vw, 1.8rem);
+  line-height: 1.5;
+}
+
+.case-description {
+  max-width: 75ch;
+  font-size: 0.95rem;
+  line-height: 1.8;
+}
+
+.case-facts {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1.5rem;
+  margin-block: 2rem;
+  padding-block: 1.5rem;
+  border-block: 1px solid var(--color-border);
+}
+
+.case-facts > div {
+  min-width: 0;
+}
+
+.case-facts dt {
+  margin-bottom: 0.5rem;
+  color: var(--color-muted);
+  font-size: 0.7rem;
+}
+
+.case-facts dd {
+  margin: 0;
+  font-size: 0.85rem;
+  line-height: 1.7;
+}
+
+.case-cover {
+  margin: 2.5rem 0 0;
+  overflow: hidden;
+  border: 1px solid var(--color-border);
+  border-radius: var(--panel-radius);
+  background: var(--color-surface);
+}
+
+.case-cover img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.case-cover figcaption {
+  padding: 1rem;
+  color: var(--color-muted);
+  font-size: 0.75rem;
+  line-height: 1.7;
+}

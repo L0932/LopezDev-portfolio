@@ -104,6 +104,10 @@
   .about-portrait {
     max-width: 240px;
   }
+
+  .case-facts {
+  grid-template-columns: 1fr;
+}
 }
 
 /* SMALL PHONES */

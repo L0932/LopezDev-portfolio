@@ -30,14 +30,17 @@
         class="primary-navigation"
         aria-label="Primary navigation"
       >
+        <a href="#profile">Home</a>
         <a href="#forgesim">Work</a>
         <a href="#experience">Experience</a>
         <a href="#services">Services</a>
         <a href="#about">About</a>
         <a href="#contact">Contact</a>
-        <a href="./assets/Arnold-Lopez-Resume.pdf"
-           target="_blank"
-           rel="noopener noreferrer"
+
+        <a 
+          href="./assets/Arnold-Lopez-Resume.pdf"
+          target="_blank"
+          rel="noopener noreferrer"
         >Résumé
       </a>
       </nav>
@@ -175,7 +178,6 @@
 
     <div class="project-highlights">
       <article class="project-highlight">
-        <span class="highlight-number" aria-hidden="true"></span>
         <h3>Rendering</h3>
         <p>
           glTF 2.0 assets, metallic-roughness PBR, HDR rendering,
@@ -184,7 +186,6 @@
       </article>
 
       <article class="project-highlight">
-        <span class="highlight-number" aria-hidden="true"></span>
         <h3>Editor Tooling</h3>
         <p>
           Scene hierarchy, object and light selection, transform
@@ -193,7 +194,6 @@
       </article>
 
       <article class="project-highlight">
-        <span class="highlight-number" aria-hidden="true"></span>
         <h3>Runtime Foundations</h3>
         <p>
           Fixed-timestep scheduling with bounded catch-up and
@@ -203,47 +203,6 @@
     </div>
   </div>
 </section>
-
-  <section id="about">
-    <p class="section__text__p1">Get To Know More</p>
-    <h1 class="title">About Me</h1>
-
-    <div class="section-container">
-      <div class="section__pic-container">
-        <img src="./assets/profile-pic-02.jpg" alt="Profile picture" class="about-pic" />
-      </div>
-
-      <div class="about-details-container">
-        <div class="about-containers">
-          <div class="details-container">
-            <img src="./assets/experience.png" alt="Experience icon" class="icon" />
-            <h3>Experience</h3>
-            <p class="exp-details">
-              <span>6+ Years Software Development</span><br />
-              <span>Simulation • Graphics • Tools • Real-Time Systems</span><br />
-            </p>
-          </div>
-
-          <div class="details-container">
-            <img src="./assets/education.png" alt="Education icon" class="icon" />
-            <h3>Education</h3>
-            <p>B.Sc in Computer Game Development<br />DePaul University</p>
-          </div>
-        </div>
-
-        <div class="text-container">
-          <p>
-            I’m a software engineer specializing in real-time simulation and interactive systems, working primarily in C++ and C#. 
-            I’ve worked on simulation and gameplay systems, engine-level features, developer tools, and VR training applications. 
-            I care about performance, clean architecture, and building software that’s easy to maintain. 
-            I especially enjoy working on the systems, graphics, and tools that make interactive experiences possible.
-          </p>
-        </div>
-      </div>
-    </div>
-
-    <img src="./assets/arrow.png" alt="Arrow Icon" class="icon arrow" onclick="location.href='./#experience'" />
-  </section>
 
 <section id="experience" class="professional-experience">
   <div class="container">
@@ -291,104 +250,79 @@
   </div>
 </section>
 
-  <section id="projects">
-    <p class="section__text__p1">Browse My Recent</p>
-    <h1 class="title">Projects</h1>
+<section id="projects" class="earlier-projects">
+  <div class="container">
+    <p class="section-eyebrow">Earlier projects</p>
 
-    <div class="experience-details-container">
-      <div class="about-containers">
-         <div class="details-container color-container">
-          <div class="article-container">
-            <div class="project-image-wrapper">
-              <img src="./assets/forgesim_preview.png" alt="ForgeSim" class="project-img" />
-            </div>
-          </div>
+    <div class="earlier-project-grid">
+      <article class="earlier-project-card">
+        <img
+          class="earlier-project-image"
+          src="./assets/terrasweeper-pic.png"
+          alt="Terrasweeper desert landscape."
+          loading="lazy"
+        />
 
-          <h2 class="experienced-sub-title project-title">ForgeSim</h2>
-          <p class="project-description">
-            A work-in-progress real-time simulation framework and editor built in modern C++, focused on mechanical systems, 
-            interactive simulation, rendering, and developer tooling.
+        <div class="earlier-project-copy">
+          <h2>Terrasweeper</h2>
+
+          <p>
+            A 3D Minesweeper-style Android game with destructible
+            terrain, timed runs, and Google Play achievements.
           </p>
 
-          <div class="btn-container">
-            <button class="btn btn-color-2 project-btn" onclick="window.open('https://github.com/L0932/ForgeSim', '_blank')">
-              Github
-            </button>
-          </div> 
-        </div> 
+          <div class="project-links">
+            <a
+              href="https://lopezdeveloper.net/projects/terrasweeper/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >Play Demo ↗</a>
 
-        <div class="details-container color-container">
-          <div class="article-container">
-            <div class="project-image-wrapper">
-              <img src="./assets/terrasweeper-pic.png" alt="Terrasweeper" class="project-img" />
-            </div>
-          </div>
-
-          <h2 class="experienced-sub-title project-title">Terrasweeper</h2>
-          <p class="project-description">
-            A 3D Minesweeper style game built around real-time terrain deformation. Incorrect tile picks trigger explosions that crater the ground.
-            Features timed runs, leaderboards, and Google Play achievements on Android.
-          </p>
-
-          <div class="btn-container">
-            <button class="btn btn-color-2 project-btn" onclick="window.open('https://github.com/L0932/Terrasweeper', '_blank')">
-              Github
-            </button>
-            <button class="btn btn-color-2 project-btn" onclick="window.open('https://lopezdeveloper.net/projects/terrasweeper/', '_blank')">
-              Live Demo
-            </button>
+            <a
+              href="https://github.com/L0932/Terrasweeper"
+              target="_blank"
+              rel="noopener noreferrer"
+            >GitHub ↗</a>
           </div>
         </div>
+      </article>
 
-        <div class="details-container color-container">
-          <div class="article-container">
-            <div class="project-image-wrapper">
-              <img src="./assets/dungeon-project.png" alt="Dungeon Generator" class="project-img" />
-            </div>
-          </div>
+      <article class="earlier-project-card">
+        <img
+          class="earlier-project-image"
+          src="./assets/dungeon-project.png"
+          alt="Procedurally generated dungeon rooms."
+          loading="lazy"
+        />
 
-          <h2 class="experienced-sub-title project-title">Dungeon Generator</h2>
-          <p class="project-description">
-            Runtime procedural dungeon generator using Binding of Isaac-style room placement, interactive camera controls,
-            and a custom immediate-mode UI for live parameter tuning and iteration.
+        <div class="earlier-project-copy">
+          <h2>Dungeon Generator</h2>
+
+          <p>
+            Procedural room placement with interactive camera controls
+            and a live interface for tuning generation parameters.
           </p>
 
-          <div class="btn-container">
-            <button class="btn btn-color-2 project-btn" onclick="window.open('https://github.com/L0932/DungeonGenerator', '_blank')">
-              Github
-            </button>
-            <button class="btn btn-color-2 project-btn" onclick="window.open('https://lopezdeveloper.net/projects/dungeon-generator-demo/', '_blank')">
-              Live Demo
-            </button>
+          <div class="project-links">
+            <a
+              href="https://lopezdeveloper.net/projects/dungeon-generator-demo/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >Try Demo ↗</a>
+
+            <a
+              href="https://github.com/L0932/DungeonGenerator"
+              target="_blank"
+              rel="noopener noreferrer"
+            >GitHub ↗</a>
           </div>
-        </div>        
-
-      </div> 
+        </div>
+      </article>
     </div>
+  </div>
+</section>
 
-    <img src="./assets/arrow.png" alt="Arrow Icon" class="icon arrow" onclick="location.href='./#contact'" />
-  </section>
-
-  <section id="contact">
-    <p class="section__text__p1">Get in Touch</p>
-    <h1 class="title">Contact Me</h1>
-
-    <div class="contact-info-upper-container">
-      <div class="contact-info-container">
-        <img src="./assets/email.png" alt="Email icon" class="icon contact-icon email-icon" />
-        <p><a href="mailto:arnold.r.lopez@hotmail.com">arnold.r.lopez@hotmail.com</a></p>
-      </div>
-
-      <div class="contact-info-container">
-        <img src="./assets/linkedin.png" alt="LinkedIn icon" class="icon contact-icon" />
-        <p>
-          <a href="javascript:window.open('https://linkedin.com/in/arnoldlopez/', '_blank');">LinkedIn</a>
-        </p>
-      </div>
-    </div>
-
-    <!-- Contract and Freelance (inside Contact, not in nav) -->
-   <section id="services" class="services-section">
+<section id="services" class="services-section">
   <div class="container">
     <p class="section-eyebrow">Contract &amp; freelance</p>
 
@@ -445,22 +379,115 @@
     </a>
   </div>
 </section>
-  </section>
 
-  <footer>
-    <nav>
-      <div class="nav-links-container">
-        <ul class="nav-links">
-          <li><a href="#profile">Resume</a></li>
-          <li><a href="#about">About</a></li>
-          <!-- <li><a href="#experience">Experience</a></li> -->
-          <li><a href="#projects">Projects</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
+<section id="about" class="about-section">
+  <div class="container">
+    <p class="section-eyebrow">About me</p>
+
+    <div class="about-layout">
+      <img
+        class="about-portrait"
+        src="./assets/profile-pic-02.jpg"
+        alt="Arnold Lopez"
+        loading="lazy"
+      />
+
+      <div class="about-copy">
+        <h2>Arnold Lopez</h2>
+
+        <p>
+          I'm a software engineer focused on the systems behind
+          interactive experiences. My professional background spans
+          C++ graphics technology, developer tools, and Unity-based
+          Navy training applications.
+        </p>
+
+        <p>
+          I'm currently developing ForgeSim to explore real-time
+          engine architecture, rendering, and editor tooling.
+          I enjoy solving technical problems and building practical
+          tools that make complex systems easier to work with.
+        </p>
+
+        <p class="about-education">
+          Computer Game Development · DePaul University
+        </p>
+
+        <a
+          class="hero-button hero-button-secondary"
+          href="./assets/Arnold-Lopez-Resume.pdf"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          View Résumé <span aria-hidden="true">↗</span>
+        </a>
       </div>
-    </nav>
-    <p>Copyright &#169; 2025 Arnold Lopez. All Rights Reserved.</p>
-  </footer>
+    </div>
+  </div>
+</section>
+
+<section id="contact" class="contact-section">
+  <div class="container">
+    <div class="contact-panel">
+      <div class="contact-copy">
+        <p class="section-eyebrow">Let's work together</p>
+
+        <h2>Have a real-time engineering challenge?</h2>
+
+        <p>
+          I'm open to discussing engineering roles and focused
+          contract projects in simulation, graphics, and developer tools.
+        </p>
+
+        <a
+          class="hero-button hero-button-primary"
+          href="mailto:arnold.r.lopez@hotmail.com?subject=Engineering%20Inquiry"
+        >
+          Email Me <span aria-hidden="true">→</span>
+        </a>
+      </div>
+
+      <div class="contact-links">
+        <a href="mailto:arnold.r.lopez@hotmail.com">
+          arnold.r.lopez@hotmail.com
+        </a>
+
+        <a
+          href="https://www.linkedin.com/in/arnoldlopez/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          LinkedIn <span aria-hidden="true">↗</span>
+        </a>
+
+        <a
+          href="https://github.com/L0932"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          GitHub <span aria-hidden="true">↗</span>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="container footer-inner">
+    <a class="brand" href="#profile" aria-label="Arnold Lopez home">
+      <span class="brand-mark" aria-hidden="true">AL</span>
+      <span class="brand-name">Arnold Lopez</span>
+    </a>
+
+    <a class="back-to-top" href="#profile">
+      Back to top <span aria-hidden="true">↑</span>
+    </a>
+
+    <p class="footer-copyright">
+      © 2026 Arnold Lopez. All rights reserved.
+    </p>
+  </div>
+</footer>
 
   <script src="script.js"></script>
 </body>

@@ -1,9 +1,4 @@
 @media screen and (max-width: 1400px) {
-  #profile {
-    height: 83vh;
-    margin-bottom: 6rem;
-  }
-
   .about-containers {
     flex-wrap: wrap;
   }
@@ -35,8 +30,6 @@
   }
 
   #experience, .experience-details-container { margin-top: 2rem; }
-
-  #profile, .section-container { display: block; }
 
   .arrow { display: none; }
 
@@ -75,11 +68,6 @@
 @media screen and (max-width: 600px) {
   /* let Contact grow, do not force a short height */
   #contact, footer { height: auto; }
-
-  #profile {
-    height: 83vh;
-    margin-bottom: 0;
-  }
 
   article { font-size: 1rem; }
 
@@ -149,5 +137,38 @@
 
   .primary-navigation a {
     padding: 0.75rem 0;
+  }
+}
+
+@media (max-width: 900px) {
+  .hero-layout {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+
+  .hero-copy {
+    max-width: 640px;
+  }
+}
+
+@media (max-width: 600px) {
+  .hero {
+    margin: 0;
+    padding: 2.5rem 0;
+    min-height: auto;
+    height: auto;
+  }
+
+  .hero-eyebrow {
+    font-size: 0.6rem;
+  }
+
+  .hero-actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .hero-button {
+    width: 100%;
   }
 }

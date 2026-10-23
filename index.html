@@ -38,41 +38,67 @@
     </div>
   </header>
 
-  <section id="profile">
-    <div class="section__pic-container">
-      <img src="./assets/profile-pic-01.jpg" alt="Arnold Lopez profile picture" class="circle-profile-photo" />
-    </div>
+  <section id="profile" class="hero">
+  <div class="container hero-layout">
+    <div class="hero-copy">
+      <p class="hero-eyebrow">
+        Simulation / Graphics / Tools / Immersive Systems
+      </p>
 
-    <div class="section__text">
-      <p class="section__text__p1">Hello, I'm</p>
-      <h1 class="title">Arnold Lopez</h1>
-      <p class="section__text__p2">Game Developer</p>
+      <h1>Arnold Lopez</h1>
 
-      <div class="btn-container">
-        <button class="btn btn-color-2" onclick="window.open('./assets/Arnold-Lopez-Resume.pdf')">
-          Resume
-        </button>
-        <button class="btn btn-color-1" onclick="location.href='./#contact'">
-          Contact Info
-        </button>
+      <p class="hero-role">
+        Real-Time Simulation &amp; Graphics Engineer
+      </p>
+
+      <p class="hero-description">
+        I build real-time applications with C++ and C#, spanning
+        rendering, developer tools, and interactive training.
+        My work focuses on performance, maintainable systems,
+        and practical development workflows.
+      </p>
+
+      <div class="hero-actions">
+        <a class="hero-button hero-button-primary" href="#projects">
+          Explore ForgeSim <span aria-hidden="true">→</span>
+        </a>
+
+        <a
+          class="hero-button hero-button-secondary"
+          href="./assets/Arnold-Lopez-Resume.pdf"
+          download
+        >
+          Download Résumé
+        </a>
       </div>
 
-      <div id="socials-container">
-        <img
-          src="./assets/linkedin.png"
-          alt="My LinkedIn profile"
-          class="icon"
-          onclick="window.open('https://linkedin.com/in/arnoldlopez/')"
-        />
-        <img
-          src="./assets/github.png"
-          alt="My Github profile"
-          class="icon"
-          onclick="window.open('https://github.com/L0932')"
-        />
+      <div class="hero-socials">
+        <a href="https://www.linkedin.com/in/arnoldlopez/">
+          LinkedIn
+        </a>
+        <a href="https://github.com/L0932">GitHub</a>
       </div>
     </div>
-  </section>
+
+    <figure class="hero-preview">
+      <div class="preview-header">
+        <span>ForgeSim</span>
+        <span class="preview-status">In development</span>
+      </div>
+
+      <img
+        src="./assets/forgesim-editor.png"
+        alt="Flight Helmet rendered in ForgeSim's docked editor,
+             with scene hierarchy and property controls."
+        fetchpriority="high"
+      />
+
+      <figcaption>
+        Modern C++ engine and editor · OpenGL · Dear ImGui
+      </figcaption>
+    </figure>
+  </div>
+</section>
 
   <section id="about">
     <p class="section__text__p1">Get To Know More</p>

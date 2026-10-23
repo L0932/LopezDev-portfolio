@@ -26,6 +26,11 @@
     grid-template-columns: 1fr;
     gap: 1.5rem;
   }
+
+  .case-capabilities {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
 }
 
 /* MOBILE NAVIGATION AND SECTION LAYOUTS */

@@ -872,3 +872,66 @@ section {
   font-size: 0.75rem;
   line-height: 1.7;
 }
+
+.case-section {
+  padding-bottom: clamp(3rem, 7vw, 6rem);
+}
+
+.case-section h2 {
+  margin-bottom: 2rem;
+  font-size: clamp(1.75rem, 3vw, 2.5rem);
+  font-weight: 600;
+  letter-spacing: -0.03em;
+  line-height: 1.25;
+}
+
+.case-capabilities {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 2rem;
+}
+
+.case-capabilities article {
+  min-width: 0;
+}
+
+.case-capabilities h3,
+.case-decision h3 {
+  margin-bottom: 0.75rem;
+  font-size: 1.1rem;
+  font-weight: 500;
+  line-height: 1.4;
+}
+
+.case-capabilities p,
+.case-decision p {
+  font-size: 0.9rem;
+  line-height: 1.8;
+}
+
+.case-decisions {
+  display: grid;
+  gap: 2.5rem;
+  max-width: 80ch;
+}
+
+.case-decision p + p {
+  margin-top: 1rem;
+}
+
+.case-prose {
+  max-width: 80ch;
+}
+
+.case-prose p {
+  font-size: 0.9rem;
+  line-height: 1.8;
+}
+
+.case-prose p + p {
+  margin-top: 1rem;
+}
+
+.case-actions {
+  margin-top: 2rem;
+}

@@ -34,13 +34,6 @@
     border-radius: 2rem;
   }
 
-  #desktop-nav { display: none; }
-  #hamburger-nav {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-  }
-
   #experience, .experience-details-container { margin-top: 2rem; }
 
   #profile, .section-container { display: block; }
@@ -132,5 +125,29 @@
 @media screen and (max-width: 700px) {
   .freelance-cards {
     grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 700px) {
+  .header-inner {
+    flex-wrap: wrap;
+    gap: 0;
+    padding-block: 1rem;
+  }
+
+  .brand-name{
+    font-size: 0.75rem;
+  }
+
+  .primary-navigation {
+    width: 100%;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0;
+    padding-top: 1rem;
+  }
+
+  .primary-navigation a {
+    padding: 0.75rem 0;
   }
 }

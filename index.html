@@ -8,34 +8,35 @@
   <link rel="stylesheet" href="mediaqueries.css" />
 </head>
 <body>
-  <nav id="desktop-nav">
-    <div class="logo">Arnold Lopez</div>
-    <div>
-      <ul class="nav-links">
-        <li><a href="#profile">Resume</a></li>
-        <li><a href="#about">About</a></li>
-        <!-- <li><a href="#experience">Experience</a></li> -->
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-    </div>
-  </nav>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="#profile" aria-label="Arnold Lopez home">
+        <span class="brand-mark" aria-hidden="true">AL</span>
+        <span class="brand-name">Arnold Lopez</span>
+      </a>
 
-  <nav id="hamburger-nav">
-    <div class="logo">Arnold Lopez</div>
-    <div class="hamburger-menu">
-      <div class="hamburger-icon" onclick="toggleMenu()">
-        <span></span><span></span><span></span>
-      </div>
-      <div class="menu-links">
-        <li><a href="#profile" onclick="toggleMenu()">Resume</a></li>
-        <li><a href="#about" onclick="toggleMenu()">About</a></li>
-        <!-- <li><a href="#experience" onclick="toggleMenu()">Experience</a></li> -->
-        <li><a href="#projects" onclick="toggleMenu()">Projects</a></li>
-        <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
-      </div>
+      <button
+        class="menu-toggle"
+        type="button"
+        aria-controls="primary-navigation"
+        aria-expanded="false"
+        hidden
+      >
+        Menu
+      </button>
+
+      <nav
+        id="primary-navigation"
+        class="primary-navigation"
+        aria-label="Primary navigation"
+      >
+        <a href="#projects">Work</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+        <a href="./assets/Arnold-Lopez-Resume.pdf">Résumé</a>
+      </nav>
     </div>
-  </nav>
+  </header>
 
   <section id="profile">
     <div class="section__pic-container">

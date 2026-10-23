@@ -329,21 +329,32 @@ section {
 
 .technology-list {
   display: flex;
-  flex: 1;
   flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
-  gap: 1rem 1.5rem;
+  gap: 1.25rem 1.75rem;
+  min-width: 0;
   margin: 0;
   padding: 0;
   list-style: none;
 }
 
 .technology-list li {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
   color: var(--color-text);
   font-size: 0.85rem;
   font-weight: 500;
   white-space: nowrap;
+}
+
+.technology-list img {
+  display: block;
+  width: 28px;
+  height: 28px;
+  object-fit: contain;
+  flex-shrink: 0;
 }
 
 /* FEATURED PROJECT */
@@ -934,4 +945,25 @@ section {
 
 .case-actions {
   margin-top: 2rem;
+}
+
+.case-image-link {
+  display: block;
+  cursor: zoom-in;
+}
+
+.case-image-link img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.technology-logo-light {
+  filter: brightness(0) invert(1);
+}
+
+.technology-list img.technology-wordmark {
+  width: 110px;
+  height: 28px;
+  object-fit: contain;
 }

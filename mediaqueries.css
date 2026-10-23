@@ -207,3 +207,33 @@
     padding: 3rem 0;
   }
 }
+
+@media (max-width: 700px) {
+  .experience-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  #experience.professional-experience {
+    margin: 0;
+    padding: 0 0 3rem;
+  }
+
+  .experience-entry {
+    padding: 1.25rem;
+  }
+}
+
+@media (max-width: 900px) {
+  .services-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+}
+
+@media (max-width: 700px) {
+  .services-section {
+    margin: 0;
+    padding: 0 0 3rem;
+  }
+}

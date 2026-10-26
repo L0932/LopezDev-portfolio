@@ -354,88 +354,46 @@
   </section>
 
     <section class="case-section" aria-labelledby="decisions-title">
-      <div class="container">
-        <p class="section-eyebrow">Engineering decisions</p>
-        <h2 id="decisions-title">Designing the foundations</h2>
+  <div class="container">
+    <p class="section-eyebrow">Engineering decisions</p>
+    <h2 id="decisions-title">Designing the foundations</h2>
 
-        <div class="case-decisions">
-          <article class="case-decision">
-            <h3>Separate simulation timing from rendering</h3>
-            <p>
-              ForgeSim advances scheduled simulation updates at a fixed
-              interval while rendering runs separately. Bounded catch-up
-              prevents a slow frame from triggering unlimited updates.
-            </p>
-            <p>
-              Sustained overload still requires an explicit policy for
-              handling simulation time. A fixed timestep alone does not
-              guarantee deterministic results.
-            </p>
-          </article>
+    <div class="case-decisions">
+      <article class="case-decision">
+        <h3>Separate simulation timing from rendering</h3>
 
-          <article class="case-decision">
-            <h3>Use glTF as the first asset format</h3>
-            <p>
-              A focused asset pipeline handles meshes, materials, textures,
-              and node transforms, with fallbacks for missing data.
-              Compatibility depends on the glTF features used by each asset.
-            </p>
-          </article>
-        </div>
-      </div>
-    </section>
-        </div>
-      </div>
-    </section>
+        <p>
+          ForgeSim advances scheduled simulation updates at a fixed
+          interval while rendering runs separately. Bounded catch-up
+          prevents a slow frame from triggering unlimited updates.
+        </p>
 
-    <section class="case-section" aria-labelledby="validation-title">
-      <div class="container">
-        <p class="section-eyebrow">Validation</p>
-        <h2 id="validation-title">Checking behavior and visual results</h2>
+        <p>
+          Sustained overload still requires an explicit policy for
+          handling simulation time. A fixed timestep alone does not
+          guarantee deterministic results.
+        </p>
+      </article>
 
-        <div class="case-prose">
-          <p>
-            ForgeSim combines automated tests for selected engine
-            behaviors with visual inspection of rendered scenes.
-            Tests cover areas such as fixed-step scheduling, asset
-            processing, selection, and transform-edit history.
-          </p>
+      <article class="case-decision">
+        <h3>Use glTF as the first asset format</h3>
 
-          <p>
-            A material gallery provides controlled comparisons of
-            metallic and dielectric surfaces, roughness, normal maps,
-            occlusion, and emissive inputs. Imported assets such as
-            Flight Helmet exercise multiple materials and textures
-            within the editor.
-          </p>
-        </div>
+        <p>
+          A focused asset pipeline handles multiple meshes, materials,
+          textures, and node transforms. It supplies fallback textures
+          and generates missing normals or tangents where supported
+          by the source data.
+        </p>
 
-        <figure class="case-cover">
-          <a
-            class="case-image-link"
-            href="../../assets/forgesim-workshop.png"
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="Open ForgeSim workshop screenshot at full resolution in a new tab"
-          >
-            <img
-              src="../../assets/forgesim-workshop.png"
-              alt="Workshop environment rendered in ForgeSim with a scooter, equipment, and docked editor panels."
-              width="2042"
-              height="975"
-              loading="lazy"
-            />
-          </a>
-
-          <figcaption>
-            An imported workshop environment rendered in ForgeSim,
-            demonstrating textured assets within the docked editor.
-            Environment artwork is third-party content.
-          </figcaption>
-        </figure>
-      </div>
-    </section>
-
+        <p>
+          Supporting one initial format keeps development manageable.
+          Compatibility depends on the glTF features used by each asset;
+          support does not yet extend to every extension or material model.
+        </p>
+      </article>
+    </div>
+  </div>
+</section>
     <section class="case-section" aria-labelledby="direction-title">
       <div class="container">
         <p class="section-eyebrow">Development direction</p>

@@ -1145,3 +1145,9 @@ section {
   margin: 2rem 0 0;
   border-bottom: 0;
 }
+
+.case-intro #case-title {
+  font-family: "Sora", sans-serif;
+  font-weight: 700;
+  letter-spacing: -0.045em;
+}

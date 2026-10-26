@@ -67,10 +67,10 @@ section {
 .section-eyebrow {
   margin-bottom: 1.5rem;
   color: var(--color-accent);
-  font-size: 0.65rem;
+  font-size: 0.85rem;
   font-weight: 600;
   letter-spacing: 0.16em;
-  line-height: 1.8;
+  line-height: 1.5;
   text-transform: uppercase;
 }
 
@@ -215,7 +215,7 @@ section {
 .hero-eyebrow {
   margin-bottom: 1.25rem;
   color: var(--color-accent);
-  font-size: 0.65rem;
+  font-size: 0.85rem;
   font-weight: 600;
   letter-spacing: 0.14em;
   line-height: 1.8;
@@ -1150,4 +1150,98 @@ section {
   font-family: "Sora", sans-serif;
   font-weight: 700;
   letter-spacing: -0.045em;
+}
+
+.featured-project-title {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.featured-project-title img {
+  display: block;
+  flex: 0 0 auto;
+  width: 128px;
+  height: 128px;
+  object-fit: contain;
+}
+
+.experience-logo {
+  display: flex;
+  align-items: center;
+  height: 72px;
+  margin-bottom: 1.25rem;
+}
+
+.company-logo {
+  display: block;
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  object-position: left center;
+}
+
+.company-logo-ecs {
+  width: 280px;
+}
+
+.company-logo-leidos {
+  width: 180px;
+}
+
+.service-icon {
+  display: block;
+  width: 56px;
+  height: 56px;
+  margin-bottom: 1.25rem;
+  color: var(--color-accent);
+}
+
+.contact-panel-balanced {
+  grid-template-columns: minmax(0, 1.5fr) minmax(0, 1fr);
+  gap: clamp(2rem, 4vw, 3rem);
+}
+
+.contact-panel-balanced .contact-copy > p:last-child {
+  margin-bottom: 0;
+}
+
+.contact-methods {
+  display: grid;
+  gap: 0.5rem;
+  min-width: 0;
+  padding-left: 2rem;
+  border-left: 1px solid var(--color-border);
+}
+
+.contact-method {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  min-height: 64px;
+  padding: 1rem;
+  border-bottom: 1px solid var(--color-border);
+  color: var(--color-text);
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.contact-method:hover {
+  background: rgb(79 148 255 / 7%);
+  color: var(--color-highlight);
+  text-decoration: none;
+}
+
+.contact-method-email {
+  border: 1px solid var(--color-accent);
+  border-radius: 6px;
+  font-weight: 600;
+}
+
+.contact-method-icon {
+  display: block;
+  flex: 0 0 28px;
+  width: 28px;
+  height: 28px;
+  color: var(--color-accent);
 }

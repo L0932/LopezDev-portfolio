@@ -353,7 +353,131 @@
     </div>
   </section>
 
-    <section class="case-section" aria-labelledby="decisions-title">
+  <section class="case-section case-gallery-section" aria-labelledby="gallery-title">
+  <div class="container">
+    <p class="section-eyebrow">Gallery</p>
+    <h2 id="gallery-title">Inside ForgeSim</h2>
+
+    <p class="gallery-intro">
+      Explore scenes and materials rendered in the current editor.
+    </p>
+
+    <div class="scene-gallery" data-gallery>
+      <figure class="gallery-feature">
+        <a
+          class="gallery-full-image"
+          href="../../assets/forgesim-editor.png"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Open Flight Helmet screenshot at full resolution"
+        >
+          <img
+            class="gallery-image"
+            src="../../assets/forgesim-editor.png"
+            alt="Flight Helmet displayed in ForgeSim's scene editor."
+            loading="lazy"
+          />
+        </a>
+
+        <figcaption class="gallery-caption">
+          <div aria-live="polite" aria-atomic="true">
+            <h3 class="gallery-image-title">Flight Helmet</h3>
+            <p class="gallery-description">
+              Imported glTF materials in the scene editor.
+            </p>
+          </div>
+
+          <a
+            class="gallery-full-link"
+            href="../../assets/forgesim-editor.png"
+            target="_blank"
+            rel="noopener noreferrer"
+          >View full size</a>
+        </figcaption>
+      </figure>
+
+      <div class="gallery-controls" hidden>
+        <button type="button" data-gallery-previous>
+          Previous
+        </button>
+        <span class="gallery-counter">1 / 3</span>
+        <button type="button" data-gallery-next>
+          Next
+        </button>
+      </div>
+
+      <div class="gallery-thumbnails" aria-label="Gallery screenshots">
+        <a
+          class="gallery-thumbnail"
+          href="../../assets/sponza-lion-gallery.png"
+          target="_blank"
+          rel="noopener noreferrer"
+          data-title="Sponza — Architectural Detail"
+          data-description="A close-up of Sponza’s carved lion relief, showing textured stone materials rendered in ForgeSim."
+          data-alt="Carved stone lion relief from Sponza displayed in the ForgeSim editor."
+        >
+          <img
+            src="../../assets/sponza-lion-gallery.png"
+            alt=""
+            loading="lazy"
+          />
+          <span>Sponza detail</span>
+        </a>
+        <a
+          class="gallery-thumbnail is-active"
+          href="../../assets/forgesim-editor.png"
+          target="_blank"
+          rel="noopener noreferrer"
+          data-title="Flight Helmet"
+          data-description="Imported glTF materials in the scene editor."
+          data-alt="Flight Helmet displayed in ForgeSim's scene editor."
+        >
+          <img
+            src="../../assets/forgesim-editor.png"
+            alt=""
+            loading="lazy"
+          />
+          <span>Flight Helmet</span>
+        </a>
+
+        <a
+          class="gallery-thumbnail"
+          href="../../assets/forgesim-material-gallery.png"
+          target="_blank"
+          rel="noopener noreferrer"
+          data-title="Material gallery"
+          data-description="Compare metallic and dielectric surfaces under shared lighting."
+          data-alt="ForgeSim material gallery with rows of spheres showing different materials and roughness."
+        >
+          <img
+            src="../../assets/forgesim-material-gallery.png"
+            alt=""
+            loading="lazy"
+          />
+          <span>Material gallery</span>
+        </a>
+
+        <a
+          class="gallery-thumbnail"
+          href="../../assets/forgesim-workshop.png"
+          target="_blank"
+          rel="noopener noreferrer"
+          data-title="Workshop"
+          data-description="An imported workshop environment with textured objects in the editor."
+          data-alt="Workshop scene in ForgeSim with a scooter, tools, and equipment."
+        >
+          <img
+            src="../../assets/forgesim-workshop.png"
+            alt=""
+            loading="lazy"
+          />
+          <span>Workshop</span>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+  <section class="case-section" aria-labelledby="decisions-title">
   <div class="container">
     <p class="section-eyebrow">Engineering decisions</p>
     <h2 id="decisions-title">Designing the foundations</h2>
@@ -507,5 +631,7 @@
       </p>
     </div>
   </footer>
+
+  <script src="./gallery.js"></script>
 </body>
 </html>

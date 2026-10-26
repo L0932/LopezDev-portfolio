@@ -102,7 +102,15 @@
   <div class="container">
     <div class="case-hero-layout">
       <div class="case-hero-copy">
-        <h1 id="case-title">ForgeSim</h1>
+        <h1 id="case-title" class="case-brand-title">
+        <img
+          src="../../assets/forgesim-icon.png"
+          alt=""
+          width="80"
+          height="80"
+        />
+        <span>ForgeSim</span>
+      </h1>
 
         <p class="case-hero-summary">
           A modern C++ engine and interactive simulation editor.
@@ -121,7 +129,7 @@
         >
           <div class="hero-actions">
             <a
-              class="hero-button hero-button-primary download-button"
+              class="hero-button hero-button-primary download-button case-download-primary"
               href="https://github.com/L0932/ForgeSim/releases/download/v0.1.0-preview.2/ForgeSim-0.1.0-preview.2-Windows-AMD64-Setup.exe"
             >
               <svg
@@ -261,40 +269,89 @@
 </section>
 
     <section class="case-section" aria-labelledby="capabilities-title">
-      <div class="container">
-        <p class="section-eyebrow">Current implementation</p>
-        <h2 id="capabilities-title">What ForgeSim does today</h2>
+    <div class="container">
+      <p class="section-eyebrow">Current implementation</p>
+      <h2 id="capabilities-title">What ForgeSim does today</h2>
 
-        <div class="case-capabilities">
-          <article>
-            <h3>Rendering</h3>
-            <p>
-              Loads glTF scenes and materials into an OpenGL rendering
-              pipeline with metallic-roughness PBR, image-based lighting,
-              HDR rendering, exposure control, and tone mapping.
-            </p>
-          </article>
+      <div class="case-capabilities">
+        <article>
+          <svg
+            class="case-capability-icon"
+            viewBox="0 0 64 64"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2.5"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            aria-hidden="true"
+            focusable="false"
+          >
+            <path d="m10 20 22-12 22 12v25L32 57 10 45Z" />
+            <path d="m10 20 22 13 22-13M32 33v24" />
+          </svg>
 
-          <article>
-            <h3>Scene editing</h3>
-            <p>
-              Provides a docked workspace with scene hierarchy, object
-              and light selection, property controls, transform gizmos,
-              and undo/redo for transform edits.
-            </p>
-          </article>
+          <h3>Rendering</h3>
+          <p>
+            Textured glTF scenes with metallic-roughness PBR,
+            image-based lighting, HDR rendering, and exposure
+            and tone-mapping controls.
+          </p>
+        </article>
 
-          <article>
-            <h3>Runtime foundations</h3>
-            <p>
-              Uses fixed-timestep scheduling with bounded catch-up.
-              Automated tests cover selected core, asset-processing,
-              selection, and editor behaviors.
-            </p>
-          </article>
-        </div>
+        <article>
+          <svg
+            class="case-capability-icon"
+            viewBox="0 0 64 64"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2.5"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            aria-hidden="true"
+            focusable="false"
+          >
+            <path d="m17 29 15-8 15 8v17l-15 9-15-9Z" />
+            <path d="m17 29 15 9 15-9M32 38v17" />
+            <path d="M32 21V5m-4 4 4-4 4 4" />
+            <path d="m17 46-12 7m1-6-1 6 6 1" />
+            <path d="m47 46 12 7m-1-6 1 6-6 1" />
+          </svg>
+
+          <h3>Scene editing</h3>
+          <p>
+            Select objects and lights, edit properties, and manipulate
+            transforms in a docked workspace. Undo and redo transform edits.
+          </p>
+        </article>
+
+        <article>
+          <svg
+            class="case-capability-icon"
+            viewBox="0 0 64 64"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2.5"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            aria-hidden="true"
+            focusable="false"
+          >
+            <circle cx="32" cy="32" r="25" />
+            <path d="M32 13v4m0 30v4M13 32h4m30 0h4" />
+            <path d="m19 19 3 3m20 20 3 3M19 45l3-3m20-20 3-3" />
+            <path d="M32 23v10l10 6" />
+          </svg>
+
+          <h3>Runtime foundations</h3>
+          <p>
+            Fixed-step scheduling with bounded catch-up, supported
+            by automated tests for selected asset, selection,
+            and editor behaviors.
+          </p>
+        </article>
       </div>
-    </section>
+    </div>
+  </section>
 
     <section class="case-section" aria-labelledby="decisions-title">
       <div class="container">
@@ -304,52 +361,29 @@
         <div class="case-decisions">
           <article class="case-decision">
             <h3>Separate simulation timing from rendering</h3>
-
             <p>
-              Rendering frequency varies with scene complexity and
-              hardware. Advancing simulation directly by each frame's
-              elapsed time would make its update interval vary too.
+              ForgeSim advances scheduled simulation updates at a fixed
+              interval while rendering runs separately. Bounded catch-up
+              prevents a slow frame from triggering unlimited updates.
             </p>
-
             <p>
-              ForgeSim accumulates elapsed time and advances scheduled
-              simulation updates at a fixed interval. Rendering runs
-              separately, and catch-up work is bounded so a slow frame
-              cannot trigger unlimited simulation updates.
-            </p>
-
-            <p>
-              Bounding catch-up limits the work performed after a stall,
-              but sustained overload requires an explicit policy for
-              handling simulation time. A fixed timestep alone does
-              not guarantee deterministic results.
+              Sustained overload still requires an explicit policy for
+              handling simulation time. A fixed timestep alone does not
+              guarantee deterministic results.
             </p>
           </article>
 
           <article class="case-decision">
             <h3>Use glTF as the first asset format</h3>
-
             <p>
-              A rendering demonstration needs more than geometry.
-              Materials, textures, scene transforms, and incomplete
-              source data all affect whether an imported asset behaves
-              correctly.
-            </p>
-
-            <p>
-              ForgeSim's glTF path handles multiple meshes, primitives,
-              materials, and node transforms. It supplies fallback
-              textures and generates missing normals or tangents
-              where supported by the source data.
-            </p>
-
-            <p>
-              Supporting a focused asset path keeps the implementation
-              manageable. Compatibility still depends on the features
-              used by each asset; this does not imply support for every
-              glTF extension or material model.
+              A focused asset pipeline handles meshes, materials, textures,
+              and node transforms, with fallbacks for missing data.
+              Compatibility depends on the glTF features used by each asset.
             </p>
           </article>
+        </div>
+      </div>
+    </section>
         </div>
       </div>
     </section>

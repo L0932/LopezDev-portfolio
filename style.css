@@ -1166,6 +1166,14 @@ section {
   object-fit: contain;
 }
 
+.case-brand-title img {
+  display: block;
+  flex: 0 0 auto;
+  width: 128px;
+  height: 128px;
+  object-fit: contain;
+}
+
 .experience-logo {
   display: flex;
   align-items: center;
@@ -1244,4 +1252,63 @@ section {
   width: 28px;
   height: 28px;
   color: var(--color-accent);
+}
+
+/* ForgeSim hero branding */
+.case-intro #case-title.case-brand-title {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  font-size: clamp(2.5rem, 5vw, 4rem);
+}
+
+/* Filled download button */
+.case-download-primary {
+  background: var(--color-accent);
+  border-color: var(--color-accent);
+  color: var(--color-bg);
+}
+
+.case-download-primary:hover {
+  background: #80b2ff;
+  border-color: #80b2ff;
+  color: var(--color-bg);
+}
+
+/* More visible labels in the project facts strip */
+.case-hero-facts dt {
+  margin-bottom: 0.65rem;
+  color: var(--color-highlight);
+  font-size: 0.85rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+}
+
+.case-hero-facts dd {
+  font-size: 0.9rem;
+  line-height: 1.7;
+}
+
+/* ForgeSim capability icons */
+.case-capability-icon {
+  display: block;
+  width: 80px;
+  height: 80px;
+  margin-bottom: 1.25rem;
+  color: var(--color-accent);
+}
+
+/* Tighter transition from the introduction to capabilities */
+.case-intro {
+  padding-bottom: clamp(2.5rem, 5vw, 4rem);
+}
+
+.case-hero-facts {
+  margin-bottom: 0;
+}
+
+/* Keep engineering explanations at a comfortable reading width */
+.case-decisions {
+  max-width: 80ch;
+  gap: 2rem;
 }

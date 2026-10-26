@@ -144,3 +144,15 @@
     gap: 1rem;
   }
 }
+
+/* FORGESIM SPLIT INTRO */
+@media (max-width: 1000px) {
+  .case-hero-layout {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .case-hero-copy {
+    max-width: 65ch;
+  }
+}

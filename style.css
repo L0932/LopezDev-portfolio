@@ -1065,3 +1065,83 @@ section {
 .download-details p + p {
   margin-top: 0.65rem;
 }
+
+/* FORGESIM SPLIT INTRO */
+.case-hero-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.3fr);
+  align-items: start;
+  gap: clamp(2rem, 4vw, 3.5rem);
+}
+
+.case-hero-copy {
+  min-width: 0;
+}
+
+.case-hero-summary {
+  margin-bottom: 1rem;
+  color: var(--color-highlight);
+  font-size: clamp(1.2rem, 2vw, 1.6rem);
+  line-height: 1.5;
+}
+
+.case-hero-description {
+  margin-bottom: 1.5rem;
+  font-size: 0.9rem;
+  line-height: 1.8;
+}
+
+.case-hero-cover {
+  min-width: 0;
+  margin: 0;
+}
+
+.case-hero-cover img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.case-hero-cover figcaption {
+  font-size: 0.65rem;
+}
+
+.case-hero-requirements {
+  margin-top: 1rem;
+  font-size: 0.75rem;
+  line-height: 1.8;
+}
+
+.case-installation {
+  margin-top: 0.75rem;
+}
+
+.case-installation summary {
+  width: fit-content;
+  padding-block: 0.35rem;
+  color: var(--color-highlight);
+  font-size: 0.75rem;
+  cursor: pointer;
+}
+
+.case-installation summary:hover {
+  color: var(--color-text);
+}
+
+.case-installation-copy {
+  padding-top: 0.65rem;
+}
+
+.case-installation-copy p {
+  font-size: 0.75rem;
+  line-height: 1.8;
+}
+
+.case-installation-copy p + p {
+  margin-top: 0.75rem;
+}
+
+.case-hero-facts {
+  margin: 2rem 0 0;
+  border-bottom: 0;
+}

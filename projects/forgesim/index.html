@@ -92,44 +92,21 @@
     </div>
   </header>
 
-  <main id="main-content" tabindex="-1">
-    <section class="case-intro" aria-labelledby="case-title">
-      <div class="container">
-        <p class="section-eyebrow">
-          Independent project · In active development
-        </p>
-
+<main id="main-content" tabindex="-1">
+<section class="case-intro" aria-labelledby="case-title">
+  <div class="container">
+    <div class="case-hero-layout">
+      <div class="case-hero-copy">
         <h1 id="case-title">ForgeSim</h1>
 
-        <p class="case-summary">
-          Building the foundation for interactive simulation
-          through a modern C++ engine, real-time rendering,
-          and practical editor tools.
+        <p class="case-hero-summary">
+          A modern C++ engine and interactive simulation editor.
         </p>
 
-        <p class="case-description">
-          ForgeSim is an independently developed engine and editor
-          with a long-term focus on interactive mechanical systems.
-          Its current implementation establishes the rendering,
-          asset-loading, editing, and runtime foundations for that work.
+        <p class="case-hero-description">
+          Rendering, glTF assets, editable lighting,
+          and practical scene tools.
         </p>
-
-        <dl class="case-facts">
-          <div>
-            <dt>My role</dt>
-            <dd>Architecture, development, and testing</dd>
-          </div>
-
-          <div>
-            <dt>Core technologies</dt>
-            <dd>C++20, OpenGL, GLSL, CMake, Dear ImGui</dd>
-          </div>
-
-          <div>
-            <dt>Current focus</dt>
-            <dd>Rendering and editor foundations</dd>
-          </div>
-        </dl>
 
         <div
           id="download"
@@ -168,22 +145,6 @@
               target="_blank"
               rel="noopener noreferrer"
             >
-              <svg
-                class="button-icon"
-                xmlns="http://www.w3.org/2000/svg"
-                width="20"
-                height="20"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                stroke-width="1.8"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                aria-hidden="true"
-                focusable="false"
-              >
-                <path d="m7 7-5 5 5 5m10-10 5 5-5 5M14 4l-4 16" />
-              </svg>
               View Source
             </a>
           </div>
@@ -194,7 +155,7 @@
             <span>Windows x64</span>
           </p>
 
-          <ul class="download-links" aria-label="Additional download resources">
+          <ul class="download-links" aria-label="Download resources">
             <li>
               <a
                 href="https://github.com/L0932/ForgeSim/releases/download/v0.1.0-preview.2/ForgeSim-0.1.0-preview.2-Windows-AMD64.zip"
@@ -202,6 +163,7 @@
                 Portable ZIP
               </a>
             </li>
+
             <li>
               <a
                 href="https://github.com/L0932/ForgeSim/releases/tag/v0.1.0-preview.2"
@@ -213,53 +175,85 @@
             </li>
           </ul>
 
-          <div class="download-details">
-            <p>
-              Requires Windows x64 and an OpenGL 4.6-capable graphics driver.
-              Includes the PBR material gallery and HDR environment.
-              Workshop and Flight Helmet assets shown on this page are not bundled.
-            </p>
+          <p class="case-hero-requirements">
+            Requires OpenGL 4.6 · Unsigned preview
+          </p>
 
-            <p>
-              Run the installer and follow the setup instructions, or extract
-              the entire portable ZIP and launch ForgeSimSandbox.exe.
-              The installer is unsigned; Windows may show a publisher warning.
-            </p>
+          <details class="case-installation">
+            <summary>Installation details</summary>
 
-            <p>
-              This is an early development preview. Physics, mechanical
-              interactions, and VR are not yet available.
-            </p>
-          </div>
+            <div class="case-installation-copy">
+              <p>
+                Run the installer and follow the setup instructions.
+                Alternatively, extract the entire portable ZIP and
+                launch ForgeSimSandbox.exe.
+              </p>
+
+              <p>
+                The installer is unsigned. Windows or your browser
+                may display a publisher or download-reputation warning.
+              </p>
+
+              <p>
+                Includes the PBR material gallery and HDR environment.
+                Flight Helmet and workshop assets shown on this page
+                are not bundled.
+              </p>
+
+              <p>
+                This is an early development preview. Physics,
+                mechanical interactions, and VR are not yet available.
+              </p>
+            </div>
+          </details>
         </div>
+      </div>
 
-        <figure class="case-cover">
+      <figure class="case-cover case-hero-cover">
+        <a
+          class="case-image-link"
+          href="../../assets/forgesim-editor.png"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Open the ForgeSim Flight Helmet screenshot at full resolution in a new tab"
+        >
+          <img
+            src="../../assets/forgesim-editor.png"
+            alt="Flight Helmet rendered in ForgeSim's docked editor, with scene hierarchy and property controls."
+            fetchpriority="high"
+          />
+        </a>
+
+        <figcaption>
+          Flight Helmet rendered in ForgeSim.
+          Model from
           <a
-            class="case-image-link"
-            href="../../assets/forgesim-editor.png"
+            href="https://github.com/KhronosGroup/glTF-Sample-Assets/tree/main/Models/FlightHelmet"
             target="_blank"
             rel="noopener noreferrer"
-            aria-label="Open ForgeSim Flight Helmet screenshot at full resolution in a new tab"
-          >
-            <img
-              src="../../assets/forgesim-editor.png"
-              alt="ForgeSim's docked editor displaying the Flight Helmet asset with scene hierarchy and property controls."
-              fetchpriority="high"
-            />
-          </a>
+          >Khronos glTF Sample Assets</a>.
+        </figcaption>
+      </figure>
+    </div>
 
-          <figcaption>
-            Flight Helmet rendered in ForgeSim.
-            Model from
-            <a
-              href="https://github.com/KhronosGroup/glTF-Sample-Assets/tree/main/Models/FlightHelmet"
-              target="_blank"
-              rel="noopener noreferrer"
-            >Khronos glTF Sample Assets</a>.
-          </figcaption>
-        </figure>
+    <dl class="case-facts case-hero-facts">
+      <div>
+        <dt>My role</dt>
+        <dd>Architecture, development, and testing</dd>
       </div>
-    </section>
+
+      <div>
+        <dt>Core technologies</dt>
+        <dd>C++20, OpenGL, GLSL, CMake, Dear ImGui</dd>
+      </div>
+
+      <div>
+        <dt>Current focus</dt>
+        <dd>Rendering and editor foundations</dd>
+      </div>
+    </dl>
+  </div>
+</section>
 
     <section class="case-section" aria-labelledby="capabilities-title">
       <div class="container">

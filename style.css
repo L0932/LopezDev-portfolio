@@ -150,6 +150,7 @@ section {
 }
 
 .menu-toggle[hidden],
+.preview-badge[hidden],
 .primary-navigation[hidden] {
   display: none;
 }
